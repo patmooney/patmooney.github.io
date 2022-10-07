@@ -3,6 +3,10 @@
 <html>
     <head>
         <style>
+            @page {
+                size: A4;
+                margin: 20mm;
+            }
             body {
                 font-size: 21px;
                 line-height: 1.15;
@@ -14,6 +18,8 @@
                 margin-right: auto;
                 max-width: 34em;
             }
+
+
             h1, h2, h3, h4, h5 {
                 line-height: 1;
                 font-family: 'helvetica neue', helvetica, sans-serif;
@@ -35,7 +41,6 @@
                 margin: 0;
             }
             p {
-                color: #ddd;
                 line-height: 1.5;
             }
             h1 > small {
@@ -86,6 +91,23 @@
                 font-weight: bold;
                 text-align: justify;
                 font-family: 'helvetica neue', helvetica, sans-serif;
+            }
+            @media print {
+                body {
+                    color: #111;
+                    background-color: white;
+                    font-size: 14px;
+                }
+                main {
+		        max-width: 210mm;
+                    height: 297mm;
+                }
+                a {
+                    font-size: 1rem;
+                }
+                h1 {
+                    font-size: 3rem;
+                }
             }
         </style>
     </head>
